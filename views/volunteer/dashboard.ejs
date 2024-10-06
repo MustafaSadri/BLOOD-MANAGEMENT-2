@@ -1,0 +1,175 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F9F9F9;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #C72C41;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin: 10px 0;
+            text-decoration: none;
+        }
+
+        button {
+            background-color: #C72C41;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #A82333; /* Darker shade on hover */
+        }
+
+        /* Optional: Add some spacing between buttons */
+        button + button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, <%= volunteer.username %></h1>
+    <p>This is your volunteer dashboard.</p>
+
+    <a href="/volunteer/add-camp">
+        <button>Add New Blood Camp</button>
+    </a>
+    <a href="/volunteer/show-stock">
+        <button>Show Blood Stock</button>
+    </a>
+    <a href="/volunteer/manage-stock">
+        <button>Manage Blood Stock</button>
+    </a>
+    <a href="/volunteer/show-hospitals-request">
+        <button>Show Hospital Requests</button>
+    </a>
+    <a href="/volunteer/add-awareness">
+        <button>Inform Users About Blood Donation</button>
+    </a>
+   
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Dashboard</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F9F9F9;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #C72C41;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        a {
+            display: block; /* Make links block-level for better spacing */
+            margin: 10px auto; /* Center the buttons and add vertical space */
+            text-decoration: none;
+            width: fit-content;
+        }
+
+        button {
+            background-color: #C72C41;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            width: 200px; /* Fixed width for uniformity */
+        }
+
+        button:hover {
+            background-color: #A82333; /* Darker shade on hover */
+        }
+
+        /* Add consistent spacing between the buttons */
+        a + a {
+            margin-top: 15px;
+        }
+
+        /* Style the logout button */
+        .logout-form {
+            margin-top: 20px;
+        }
+
+        .logout-button {
+            background-color: transparent;
+            color: #007bff;
+            border: none;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .logout-button:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, <%= volunteer.username %></h1>
+    <p>This is your volunteer dashboard.</p>
+
+    <!-- Buttons linking to various functionalities -->
+    <a href="/volunteer/add-camp">
+        <button>Add New Blood Camp</button>
+    </a>
+    <a href="/volunteer/show-stock">
+        <button>Show Blood Stock</button>
+    </a>
+    <a href="/volunteer/manage-stock">
+        <button>Manage Blood Stock</button>
+    </a>
+    <a href="/volunteer/show-hospitals-request">
+        <button>Show Hospital Requests</button>
+    </a>
+    <a href="/volunteer/add-awareness">
+        <button>Inform Users About Blood Donation</button>
+    </a>
+
+    <!-- Logout button form, styled with the theme -->
+    <form class="logout-form" action="/volunteer/logout" method="POST">
+        <button class="logout-button" type="submit">Logout</button>
+    </form>
+</body>
+</html>
